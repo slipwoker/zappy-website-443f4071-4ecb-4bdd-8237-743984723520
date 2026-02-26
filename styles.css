@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap');
 
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
 
@@ -159,7 +159,9 @@
   
   --font-heading: 'Varela Round', 'Assistant', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
   --font-body: 'Assistant', 'Varela Round', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
-}
+
+  --body-font: 'Heebo', sans-serif;
+  --font-family: 'Heebo', sans-serif;}
 
 * {
   margin: 0;
@@ -181,7 +183,7 @@ html {
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px !important;
   line-height: 1.7 !important;
   color: var(--text-dark);
@@ -191,7 +193,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -292,7 +294,7 @@ li {
 .btn {
   display: inline-block;
   padding: 12px 28px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 600;
   text-align: center;
@@ -1090,7 +1092,7 @@ html[lang="ar"] .nav-right-group .nav-menu {
   background: none;
   border: none;
   cursor: pointer;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: inherit;
   font-weight: 500;
   display: inline-flex;
@@ -1661,7 +1663,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   background-color: var(--bg-dark);
   color: var(--text-light);
   direction: rtl;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   padding-block-start: 3.5rem;
   padding-block-end: 1.5rem;
 }
@@ -1956,7 +1958,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-hero-section .home-hero-h1 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 48px;
   font-weight: 900;
   line-height: 1.2;
@@ -1967,7 +1969,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-hero-section .home-hero-h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 22px;
   font-weight: 800;
   line-height: 1.4;
@@ -1988,7 +1990,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -2519,7 +2521,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-success-stories-section h2 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 34px;
   font-weight: 900;
   letter-spacing: -0.01em;
@@ -2529,7 +2531,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-success-stories-intro {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.75;
@@ -2568,7 +2570,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   left: 16px;
   background: rgba(255,255,255,0.95);
   color: #2C2E33;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 14px;
   font-weight: 900;
   padding: 8px 16px;
@@ -2610,7 +2612,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-success-stories-section h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 1.25;
@@ -2620,7 +2622,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-success-stories-card p {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.75;
@@ -2721,7 +2723,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-cta-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
@@ -2731,7 +2733,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-cta-text {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-light);
@@ -2750,7 +2752,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
 .home-cta-btn {
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 800;
   text-decoration: none;
@@ -2800,7 +2802,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .home-cta-trust {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 14px;
   line-height: 1.6;
   color: var(--text-light);
@@ -3277,7 +3279,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   border: 2px solid rgba(44,46,51,0.12);
   border-radius: 999px;
   padding: 8px 18px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: var(--primary);
@@ -3286,7 +3288,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-team-section h2 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.3;
@@ -3296,7 +3298,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-team-intro {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-dark);
@@ -3354,7 +3356,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-team-card h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.4;
@@ -3365,7 +3367,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-team-card p {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-dark);
@@ -3447,7 +3449,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-partners-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 48px;
   font-weight: 900;
   line-height: 1.2;
@@ -3458,7 +3460,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-partners-intro {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.7;
@@ -3536,7 +3538,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-partners-tile-name {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.4;
@@ -3554,7 +3556,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-partners-closing {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.7;
@@ -3567,7 +3569,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   display: inline-block;
   background: linear-gradient(180deg, #6FB36A 0%, #5A9456 100%);
   color: #FFFFFF;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 800;
   padding: 16px 36px;
@@ -4267,7 +4269,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .rescue-outcomes-section .rescue-outcomes-header h2 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 48px;
   font-weight: 900;
   line-height: 1.2;
@@ -4277,7 +4279,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .rescue-outcomes-section .rescue-outcomes-intro {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.7;
@@ -4321,7 +4323,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .rescue-outcomes-section .rescue-outcomes-stat-number {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 56px;
   font-weight: 900;
   line-height: 1;
@@ -4331,7 +4333,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .rescue-outcomes-section .rescue-outcomes-stat-tile h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 1.25;
@@ -4340,7 +4342,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .rescue-outcomes-section .rescue-outcomes-stat-tile p {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.7;
@@ -4380,7 +4382,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 900;
   box-shadow: 0 8px 16px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.4);
@@ -4748,7 +4750,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   width: 100%;
   padding: 16px 20px;
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   color: var(--text-dark);
   background: rgba(255, 255, 255, 0.9);
   border: 2px solid var(--border-light);
@@ -5040,7 +5042,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .contact-closing-cta-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.3;
@@ -5050,7 +5052,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .contact-closing-cta-text {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-light);
@@ -5069,7 +5071,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
 .contact-closing-cta-btn {
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
@@ -5150,7 +5152,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
 /* Global font override - exclude icon fonts and special elements */
 *:not(.fas):not(.far):not(.fab):not(.fa):not([class*="fa-"]):not(.iconify):not([class*="icon"]):not(code):not(pre):not(i[class*="fa"]) {
-  font-family: 'Rubik', sans-serif !important;
+  font-family: 'Heebo', sans-serif !important;
 }
 
 
@@ -5902,6 +5904,33 @@ body.accessibility-widget-visible ._access-menu {
 /* ========== END HERO IMAGE GRADIENT FIX ========== */
 
 
+/* ========== PRODUCT ICON STYLES (product-icon-styles) ========== */
+.product-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; width: 100%; }
+.product-title-row h1 { flex: 1; min-width: 0; }
+.product-icon-actions { display: flex; gap: 8px; flex-shrink: 0; padding-top: 6px; }
+.icon-btn { width: 36px; height: 36px; border: none; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: color 0.2s; color: currentColor; padding: 0; }
+.icon-btn:hover { color: var(--primary-color, #ff0083); }
+.icon-btn.active { color: #e74c3c; }
+.icon-btn.active .heart-outline { display: none !important; }
+.icon-btn.active .heart-filled { display: block !important; }
+.profile-section, .addresses-section, .favorites-section, .orders-section { border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 12px; padding: 24px; margin-bottom: 24px; background: transparent; }
+.favorites-section h2 { font-size: 1.25rem; color: var(--text-color, #1f2937); margin-bottom: 20px; }
+.favorites-loading { text-align: center; padding: 20px; color: var(--text-secondary, #6b7280); }
+.favorites-empty { text-align: center; padding: 32px; color: var(--text-secondary, #6b7280); }
+.favorites-empty p { margin-bottom: 16px; }
+.favorites-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+.favorite-card { background: transparent; border: 1px solid var(--border-color, rgba(128,128,128,0.2)); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s; position: relative; }
+.favorite-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.favorite-card-img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.favorite-card-body { padding: 12px; }
+.favorite-card-body h4 { font-size: 0.875rem; font-weight: 500; color: var(--text-color, #1f2937); margin: 0 0 6px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.favorite-price { font-weight: 600; color: var(--primary-color, #ff0083); font-size: 0.9rem; }
+.favorite-remove-btn { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; border-radius: 50%; border: none; background: rgba(255,255,255,0.9); color: #dc2626; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; transition: all 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+.favorite-remove-btn:hover { background: #dc2626; color: white; }
+@media (max-width: 480px) { .favorites-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+/* ========== END PRODUCT ICON STYLES ========== */
+
+
 /* ========== GRID RESPONSIVE FIX (zappy-grid-mobile-fix) ========== */
 /* Ensures grids with explicit columns use CSS variable and are responsive on mobile */
 
@@ -5925,9 +5954,10 @@ body.accessibility-widget-visible ._access-menu {
   position: relative !important;
 }
 
-/* Prevent inserted elements from exceeding their container width */
+/* Prevent inserted elements from exceeding their container width.
+   max-width uses no !important so inline styles can set a specific constraint. */
 .zappy-inserted-element {
-  max-width: 100% !important;
+  max-width: 100%;
   box-sizing: border-box !important;
 }
 
@@ -5939,9 +5969,18 @@ body.accessibility-widget-visible ._access-menu {
     gap: 1.5rem !important;
   }
   
-  /* Featured/product grids - force single column on mobile */
-  .featured-grid,
-  .product-grid {
+  /* Grid children: override min-width:auto so children with fixed-width
+     content (e.g. zoom wrappers with width:448px!important) can shrink
+     to fit the 1fr column instead of overflowing the grid container. */
+  .zappy-preserve-css-grid[data-zappy-auto-grid="true"] > *,
+  [data-zappy-auto-grid="true"] > *,
+  [data-zappy-explicit-columns="true"] > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Featured grids - force single column on mobile */
+  .featured-grid {
     grid-template-columns: 1fr !important;
   }
   
