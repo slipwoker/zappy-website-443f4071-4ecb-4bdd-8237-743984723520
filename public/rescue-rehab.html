@@ -736,7 +736,7 @@
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
         const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
-          : '0522972222';
+          : '[business_phone]';
         
         window.location.href = 'tel:' + phoneNumber;
         console.log('[Navbar] Phone button clicked');
@@ -957,9 +957,9 @@
         </pattern>
       </defs>
       <path d="M0,120 L0,90 L400,30 L800,90 L1200,30 L1200,120 Z" fill="#88C3E2"></path>
-      <path d="M0,120 L0,90 L400,30 L400,120 Z" fill="#E8573D" opacity="0.85"></path>
+      <path d="M0,120 L0,90 L400,30 L400,120 Z" fill="#E85D45" opacity="0.85"></path>
       <path d="M400,120 L400,30 L800,90 L800,120 Z" fill="#F6C24A" opacity="0.75"></path>
-      <path d="M800,120 L800,90 L1200,30 L1200,120 Z" fill="#0D9668" opacity="0.8"></path>
+      <path d="M800,120 L800,90 L1200,30 L1200,120 Z" fill="#F39C12" opacity="0.8"></path>
       <line x1="0" y1="90" x2="400" y2="30" stroke="url(#stitchPattern)" stroke-width="3" stroke-dasharray="8,4"></line>
       <line x1="400" y1="30" x2="800" y2="90" stroke="url(#stitchPattern)" stroke-width="3" stroke-dasharray="8,4"></line>
       <line x1="800" y1="90" x2="1200" y2="30" stroke="url(#stitchPattern)" stroke-width="3" stroke-dasharray="8,4"></line>
@@ -1039,23 +1039,23 @@
         <ul class="contact-list">
           <li>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:barrysela@gmail.com">barrysela@gmail.com</a>
+            <a href="mailto:[business_email]">[business_email]</a>
           </li>
           <li>
             <i class="fas fa-phone"></i>
-            <a href="tel:0522972233">0522972233</a>
+            <a href="tel:[business_phone]">[business_phone]</a>
           </li>
           <li><a href="/"><i class="fas fa-map-marker-alt"></i>
-            <span>צופית 10, ראש העין, ראש פינה, 4521735, ישראל</span></a></li>
+            <span>[business_address]</span></a></li>
         </ul>
       </div>
       
       <div class="footer-column footer-social">
         <h3 class="footer-title">עקבו אחרינו</h3>
         <div class="social-links">
-          <a href="https://facebook.com/barrysela" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://instagram.com/barrysela" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/972522972222" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="[facebook_handle]" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="[instagram_handle]" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="[whatsapp_handle]" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
@@ -1079,7 +1079,7 @@
   </div>
 </footer>
   
-  <a href="https://wa.me/972522972222" class="whatsapp-float" aria-label="WhatsApp">
+  <a href="https://wa.me/[whatsapp_handle]" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
   
