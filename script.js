@@ -544,6 +544,18 @@ window.onload = function() {
     return result;
   }
 
+  function scrollToAnchor(anchor) {
+    if (!anchor) return;
+    setTimeout(function() {
+      var target = document.getElementById(anchor) || document.querySelector("[id=\"" + anchor + "\"]");
+      if (!target) return;
+      var nav = document.querySelector("nav, header, .navbar");
+      var offset = nav ? nav.getBoundingClientRect().height + 16 : 16;
+      var top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: top, behavior: "smooth" });
+    }, 150);
+  }
+
   function navigateToResult(href) {
     var parts = href.split("#");
     var pagePath = parts[0] || "/";
@@ -551,6 +563,8 @@ window.onload = function() {
     var baseEl = document.querySelector("base");
     var baseHref = baseEl ? baseEl.getAttribute("href") || "" : "";
     var isPreview = baseHref.indexOf("/api/website/preview") !== -1;
+    var isInsideIframe = false;
+    try { isInsideIframe = window.self !== window.top; } catch(e) { isInsideIframe = true; }
     var currentPage = "/";
     if (isPreview) {
       try { currentPage = new URL(window.location.href).searchParams.get("page") || "/"; } catch(e) {}
@@ -558,20 +572,24 @@ window.onload = function() {
       currentPage = window.location.pathname;
     }
     if (pagePath === currentPage || (pagePath === "/" && currentPage === "/")) {
+      scrollToAnchor(anchor);
+      return;
+    }
+    if (isPreview && isInsideIframe && window.parent) {
       if (anchor) {
-        var target = document.getElementById(anchor) || document.querySelector("#" + anchor);
-        if (target) { target.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+        try { sessionStorage.setItem("__zappy_search_anchor", anchor); } catch(e) {}
       }
+      window.parent.postMessage({
+        type: "ZAPPY_PAGE_CHANGE",
+        pagePath: pagePath,
+        hash: anchor ? "#" + anchor : ""
+      }, "*");
+      return;
     }
     if (anchor) {
       try { sessionStorage.setItem("__zappy_search_anchor", anchor); } catch(e) {}
     }
-    if (isPreview) {
-      var previewBase = baseHref.replace(/\/$/, "");
-      window.location.href = previewBase + "?page=" + encodeURIComponent(pagePath);
-    } else {
-      window.location.href = pagePath + (anchor ? "#" + anchor : "");
-    }
+    window.location.href = pagePath + (anchor ? "#" + anchor : "");
   }
 
   function initSearch() {
@@ -586,10 +604,7 @@ window.onload = function() {
       var pendingAnchor = sessionStorage.getItem("__zappy_search_anchor");
       if (pendingAnchor) {
         sessionStorage.removeItem("__zappy_search_anchor");
-        setTimeout(function() {
-          var el = document.getElementById(pendingAnchor) || document.querySelector("#" + pendingAnchor);
-          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 600);
+        setTimeout(function() { scrollToAnchor(pendingAnchor); }, 600);
       }
     } catch(e) {}
     var activeIdx = -1;
