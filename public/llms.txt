@@ -1,6 +1,4 @@
-# שמוליקיפוד — Generative Engine Optimization Map
-
-> A nonprofit organization dedicated to caring for injured hedgehogs, providing rescue and rehabilitation services for these small animals in need of medical attention and recovery support.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -40,18 +38,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About שמוליקיפוד
-A nonprofit organization dedicated to caring for injured hedgehogs, providing rescue and rehabilitation services for these small animals in need of medical attention and recovery support.
-
-## Target Audience
-- הורים לילדים עם מוגבלויות
-- מחנכים ומורים
-- עובדי קהילה וסוציאליים
-- פילנתרופים ותורמים
-
-## Industry
-עמותות וארגונים ללא כוונת רווח
-
+## About Business
 ---
 
 # Additional Resources
