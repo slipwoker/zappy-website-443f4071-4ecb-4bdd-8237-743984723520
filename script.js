@@ -1042,6 +1042,50 @@ window.onload = function() {
 
       var isMobile = window.innerWidth <= 768;
       if (isMobile) {
+        var mSrc = img.getAttribute('data-zappy-mobile-src');
+        var mPos = img.getAttribute('data-zappy-mobile-object-position');
+        var mZoomStr = img.getAttribute('data-zappy-mobile-zoom');
+        var mZoom = parseFloat(mZoomStr);
+        var hasMobileOverrides = mPos || mZoomStr;
+        if (mSrc) img.src = mSrc;
+
+        if (hasMobileOverrides) {
+          // User configured mobile zoom/position — apply zoom/crop math
+          // to match what the editor mobile preview shows.
+          wrapper.style.setProperty('width', '100%', 'important');
+          wrapper.style.setProperty('max-width', '100%', 'important');
+          wrapper.style.setProperty('overflow', 'hidden', 'important');
+          wrapper.style.setProperty('position', 'relative', 'important');
+          var effZoom = (isFinite(mZoom) && mZoom > 0) ? mZoom : zoom;
+          var effPos = mPos || '50% 50%';
+          var rect = wrapper.getBoundingClientRect();
+          if (rect && rect.width && rect.height) {
+            var nW = img.naturalWidth || 0, nH = img.naturalHeight || 0;
+            if (nW > 0 && nH > 0) {
+              var imgA = nW / nH;
+              var contA = rect.width / rect.height;
+              var cover = coverPercents(imgA, contA);
+              var wP = 100, hP = 100;
+              if (effZoom >= 1) { wP = cover.w * effZoom; hP = cover.h * effZoom; }
+              else { var t2 = (effZoom - 0.5) / 0.5; if (!isFinite(t2)) t2 = 0; t2 = Math.max(0, Math.min(1, t2)); wP = 100 + t2 * (cover.w - 100); hP = 100 + t2 * (cover.h - 100); }
+              var p2 = parseObjPos(effPos);
+              var lP = (100 - wP) * (p2.x / 100);
+              var tP = (100 - hP) * (p2.y / 100);
+              img.style.setProperty('position', 'absolute', 'important');
+              img.style.setProperty('left', lP + '%', 'important');
+              img.style.setProperty('top', tP + '%', 'important');
+              img.style.setProperty('width', wP + '%', 'important');
+              img.style.setProperty('height', hP + '%', 'important');
+              img.style.setProperty('max-width', 'none', 'important');
+              img.style.setProperty('max-height', 'none', 'important');
+              img.style.setProperty('display', 'block', 'important');
+              img.style.setProperty('object-fit', effZoom < 1 ? 'fill' : 'cover', 'important');
+              img.style.setProperty('margin', '0', 'important');
+            }
+          }
+          return;
+        }
+
         img.style.setProperty('position', 'relative', 'important');
         img.style.setProperty('width', '100%', 'important');
         img.style.setProperty('height', 'auto', 'important');
@@ -1051,16 +1095,6 @@ window.onload = function() {
         img.style.removeProperty('left');
         img.style.removeProperty('top');
         img.style.setProperty('margin', '0', 'important');
-        var mSrc = img.getAttribute('data-zappy-mobile-src');
-        var mPos = img.getAttribute('data-zappy-mobile-object-position');
-        var mZoom = parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
-        if (mSrc) img.src = mSrc;
-        if (mPos) img.style.setProperty('object-position', mPos, 'important');
-        if (mZoom > 1) {
-          img.style.setProperty('transform', 'scale(' + mZoom + ')', 'important');
-          img.style.setProperty('transform-origin', mPos || '50% 50%', 'important');
-          wrapper.style.setProperty('overflow', 'hidden', 'important');
-        }
         return;
       }
 
