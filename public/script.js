@@ -482,6 +482,16 @@ window.onload = function() {
 })();
 
 
+
+/* ZAPPY_SEARCH_INIT_RESET */
+(function(){
+  var c=document.getElementById("zappy-search-container");
+  if(c)c.removeAttribute("data-search-init");
+  var m=document.getElementById("zappy-search-mobile-bar");
+  if(m)m.removeAttribute("data-mobile-init");
+})();
+/* END ZAPPY_SEARCH_INIT_RESET */
+
 /* ZAPPY_SITE_SEARCH — JS */
 (function() {
   var _lang = (document.documentElement.lang || "en").substring(0, 2).toLowerCase();
