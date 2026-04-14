@@ -344,7 +344,7 @@
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link" style="color: rgb(74, 74, 74) !important;">
-        <img src="/assets/business-logo.webp" alt="שמוליקיפוד" class="logo" data-image-type="logo" style="">
+        <img src="/assets/business-logo.webp" alt="שמוליקיפוד" class="logo" data-image-type="logo" >
       </a>
     </div><ul class="nav-menu" id="navMenu"><li><a href="/about">אודות</a></li><li><a href="/rescue-rehab">חילוץ ושיקום</a></li></ul></div>
     
@@ -808,12 +808,12 @@
     <div class="about-intro-content">
       <div class="about-intro-image-column">
         <div class="about-intro-image-wrapper">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1776148089737-e4g45bbzl" data-element-type="image" data-zappy-zoom-wrapper-width="600px" data-zappy-zoom-wrapper-height="600px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 600px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 600px !important; display: block !important; aspect-ratio: 600 / 600 !important;"><img data-placeholder="about-intro-image-1" data-context="Adorable cartoon hedgehog mascot character gently holding a small first-aid care kit, friendly expression, soft rounded features, warm lighting, educational nonprofit illustration style, clean background with subtle texture, suitable for Hebrew nonprofit hedgehog rescue organization" width="600" height="600" src="/assets/site-service-intro-image-1-1776148097522-66efgy.webp?v=1776148099743" alt="קיפוד חמוד מחזיק ערכת טיפול - שמוליקיפוד" data-element-type="image" data-element-id="img-1776148089737-e4g45bbzl" style="display: block; border-radius: 8px; object-position: 54% 10% !important; object-fit: cover !important; width: 100% !important; height: 100% !important; max-width: none !important; margin: 0px !important; position: absolute !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-zappy-object-position="54% 10%" data-zappy-zoom="1" data-zappy-mobile-object-position="50% 50%" data-zappy-mobile-zoom="1" data-zappy-mobile-src="/assets/site-service-intro-image-1-1776152485434-klztjl.webp?v=1776152488435"></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1776148089737-e4g45bbzl" data-element-type="image" data-zappy-zoom-wrapper-width="600px" data-zappy-zoom-wrapper-height="600px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 600px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 600px !important; display: block !important;"><img data-placeholder="about-intro-image-1" data-context="Adorable cartoon hedgehog mascot character gently holding a small first-aid care kit, friendly expression, soft rounded features, warm lighting, educational nonprofit illustration style, clean background with subtle texture, suitable for Hebrew nonprofit hedgehog rescue organization" width="600" height="600" src="/assets/site-service-intro-image-1-1776148097522-66efgy.webp?v=1776148099743" alt="קיפוד חמוד מחזיק ערכת טיפול - שמוליקיפוד" data-element-type="image" data-element-id="img-1776148089737-e4g45bbzl" style="display: block !important; border-radius: 8px; object-position: 54% 10% !important; object-fit: cover !important; width: 100% !important; height: 179.104% !important; max-width: none !important; margin: 0px !important; position: absolute !important; left: 0% !important; top: -7.91045% !important; max-height: none !important;" data-zappy-object-position="54% 10%" data-zappy-zoom="1" data-zappy-mobile-object-position="50% 50%" data-zappy-mobile-zoom="1" data-zappy-mobile-src="/assets/site-service-intro-image-1-1776152485434-klztjl.webp?v=1776152488435"></div>
           <div class="about-intro-stitch-decoration" aria-hidden="true"></div>
         </div>
       </div>
       <div class="about-intro-text-column">
-        <h2>עמותה שנבנתה לטיפול עדין</h2>
+        <h2 >עמותה שנבנתה לטיפול עדין.</h2>
         <p>אנחנו מוקדשים להצלת קיפודים פצועים ולתמיכה בהחלמה עם שיקום רגוע ומעשי.</p>
         <p>הגישה שלנו מונחית על ידי רווחת בעלי חיים, שחרור אחראי וחינוך קהילתי.</p>
         <div class="about-intro-metrics">
@@ -1245,34 +1245,40 @@
             var effPos=mobilePos||'50% 50%';
             w.style.setProperty('overflow','hidden','important');
             w.style.setProperty('position','relative','important');
+            w.style.setProperty('width','100%','important');
+            w.style.setProperty('max-width','100%','important');
             var _sW=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-width'))||0;
             var _sH=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-height'))||0;
-            var _vW=window.innerWidth||document.documentElement.clientWidth||375;
-            if(_sW>0&&_sW>_vW){var _cW=Math.min(_sW,_vW-40);w.style.setProperty('width',_cW+'px','important');if(_sH>0)w.style.setProperty('height',Math.round(_sH*(_cW/_sW))+'px','important');}
-            var rect=w.getBoundingClientRect();
-            if(rect&&rect.width&&rect.height){
-              var nW=img.naturalWidth||0,nH=img.naturalHeight||0;
-              if(nW>0&&nH>0){
-                var iA=nW/nH,cA=rect.width/rect.height;
-                var cv=_coverPct(iA,cA);
-                var wP=100,hP=100;
-                if(effZoom>=1){wP=cv.w*effZoom;hP=cv.h*effZoom;}
-                else{var t2=(effZoom-0.5)/0.5;if(!isFinite(t2))t2=0;t2=Math.max(0,Math.min(1,t2));wP=100+t2*(cv.w-100);hP=100+t2*(cv.h-100);}
-                var p2=_parsePos(effPos);
-                var lP=(100-wP)*(p2.x/100);
-                var tP=(100-hP)*(p2.y/100);
-                img.style.setProperty('position','absolute','important');
-                img.style.setProperty('left',lP+'%','important');
-                img.style.setProperty('top',tP+'%','important');
-                img.style.setProperty('width',wP+'%','important');
-                img.style.setProperty('height',hP+'%','important');
-                img.style.setProperty('max-width','none','important');
-                img.style.setProperty('max-height','none','important');
-                img.style.setProperty('display','block','important');
-                img.style.setProperty('object-fit',effZoom<1?'fill':'cover','important');
-                img.style.setProperty('transform','none','important');
-                img.style.setProperty('margin','0','important');
-              }
+            if(_sW>0&&_sH>0){w.style.setProperty('aspect-ratio',_sW+'/'+_sH,'important');w.style.setProperty('height','auto','important');}
+            function _applyZoomCrop(_img,_w,_ePos,_eZoom){
+              var rect=_w.getBoundingClientRect();
+              if(!rect||!rect.width||!rect.height)return;
+              var nW=_img.naturalWidth||0,nH=_img.naturalHeight||0;
+              if(!(nW>0&&nH>0))return;
+              var iA=nW/nH,cA=rect.width/rect.height;
+              var cv=_coverPct(iA,cA);
+              var wP=100,hP=100;
+              if(_eZoom>=1){wP=cv.w*_eZoom;hP=cv.h*_eZoom;}
+              else{var t2=(_eZoom-0.5)/0.5;if(!isFinite(t2))t2=0;t2=Math.max(0,Math.min(1,t2));wP=100+t2*(cv.w-100);hP=100+t2*(cv.h-100);}
+              var p2=_parsePos(_ePos);
+              var lP=(100-wP)*(p2.x/100);
+              var tP=(100-hP)*(p2.y/100);
+              _img.style.setProperty('position','absolute','important');
+              _img.style.setProperty('left',lP+'%','important');
+              _img.style.setProperty('top',tP+'%','important');
+              _img.style.setProperty('width',wP+'%','important');
+              _img.style.setProperty('height',hP+'%','important');
+              _img.style.setProperty('max-width','none','important');
+              _img.style.setProperty('max-height','none','important');
+              _img.style.setProperty('display','block','important');
+              _img.style.setProperty('object-fit',_eZoom<1?'fill':'cover','important');
+              _img.style.setProperty('transform','none','important');
+              _img.style.setProperty('margin','0','important');
+            }
+            _applyZoomCrop(img,w,effPos,effZoom);
+            if(mobileSrc&&!(img.complete&&img.naturalWidth>0)){
+              (function(_i,_w2,_p,_z){_i.addEventListener('load',function _ol(){_i.removeEventListener('load',_ol);try{_applyZoomCrop(_i,_w2,_p,_z);}catch(e){}});
+              })(img,w,effPos,effZoom);
             }
           }else{
             if(!inConstrainedParent)w.style.setProperty('height','auto','important');
