@@ -1117,14 +1117,33 @@ window.onload = function() {
         return;
       }
 
-      // Desktop: if the image already has zoom styles saved from the editor
-      // (position:absolute + percentage-based width), trust them — but only
-      // when zoom >= 1.  Sites published before the zoom-out fix had wrong
-      // values baked in for zoom < 1 (used cover*zoom instead of the
+      // Desktop zoom === 1: image fills the wrapper exactly — no crop math
+      // needed. Always set 100%/100% to override any stale inline styles
+      // that may have been baked in with incorrect values.
+      if (zoom === 1) {
+        wrapper.style.setProperty('overflow', 'hidden', 'important');
+        wrapper.style.setProperty('position', 'relative', 'important');
+        img.style.setProperty('position', 'absolute', 'important');
+        img.style.setProperty('width', '100%', 'important');
+        img.style.setProperty('height', '100%', 'important');
+        img.style.setProperty('left', '0%', 'important');
+        img.style.setProperty('top', '0%', 'important');
+        img.style.setProperty('max-width', 'none', 'important');
+        img.style.setProperty('max-height', 'none', 'important');
+        img.style.setProperty('object-fit', 'cover', 'important');
+        img.style.setProperty('display', 'block', 'important');
+        img.style.setProperty('margin', '0', 'important');
+        return;
+      }
+
+      // Desktop zoom > 1: if the image already has zoom styles saved from
+      // the editor (position:absolute + percentage-based width), trust
+      // them.  Sites published before the zoom-out fix had wrong values
+      // baked in for zoom < 1 (used cover*zoom instead of the
       // interpolation formula), so those must always be recalculated.
       var existingPos = (img.style.position || '').replace(/s*!importants*/g, '').trim();
       var existingW = (img.style.width || '').replace(/s*!importants*/g, '').trim();
-      if (existingPos === 'absolute' && existingW.indexOf('%') !== -1 && zoom >= 1) {
+      if (existingPos === 'absolute' && existingW.indexOf('%') !== -1 && zoom > 1) {
         wrapper.style.setProperty('overflow', 'hidden', 'important');
         wrapper.style.setProperty('position', 'relative', 'important');
         return;
